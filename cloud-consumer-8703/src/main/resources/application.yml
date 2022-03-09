@@ -1,0 +1,10 @@
+server:
+  port: 8703
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8701/eureka
+spring:
+  application:
+    name: cloud-consumer

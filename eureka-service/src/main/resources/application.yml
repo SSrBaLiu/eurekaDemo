@@ -1,0 +1,15 @@
+server:
+  port: 8701
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defautltZone: http://${eureka.instance.hostname}:${server.port}/eureka
+    register-with-eureka: false #自身 不在向eureka注册
+    fetch-registry: false  #启动时禁用client的注册
+
+spring:
+  application:
+    name: eureka-server
